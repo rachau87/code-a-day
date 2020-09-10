@@ -16,7 +16,7 @@ let result = false;
 
 // seems silly that array.foreach() doesnt have a break
 // setting x = to i makes it to where you wont search the numbers that have already been used
-// execution time 1.616 and 1.658 if using x = 0 instead of x = 1
+// execution time 1.616 and 1.658 if using x = 0 instead of x = i
 console.time('Execution Time');
 for (let i = 0; i < numbers.length; i++) {
     for (let x = i; x < numbers.length; x++) {
