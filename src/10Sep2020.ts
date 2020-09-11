@@ -20,7 +20,6 @@ let result = false;
 // seems silly that array.foreach() doesnt have a break
 // setting x = to i makes it to where you wont search the numbers that have already been used
 // execution time for 4 numbers was 1.616 
-// execution time for 40 numbers was 1.616 
 for (let i = 0; i < numbers.length; i++) {
     for (let x = i; x < numbers.length; x++) {
         if ((numbers[i] + numbers[x]) == number) {
@@ -33,11 +32,9 @@ for (let i = 0; i < numbers.length; i++) {
     }
 }
 
-
 // using big O notation
 // execution time indexof for 4 numbers 1.642
-// execution time for 40 numbers was 1.646 
-console.time('Execution Time');
+console.time('Execution Time2');
 let seen: Array<Number> = [];
 for (let i = 0; i < numbers.length; i++) {
     if(seen.indexOf((number - numbers[i]))) {
@@ -47,6 +44,6 @@ for (let i = 0; i < numbers.length; i++) {
     seen.push(numbers[i])
 }
 console.log(result);
-console.timeEnd('Execution Time');
+console.timeEnd('Execution Time2');
 
 
